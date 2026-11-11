@@ -1,0 +1,40 @@
+.inventory-section {
+  padding: 110px 7%;
+  background: linear-gradient(180deg, #0b1025 0%, #13152e 100%);
+  scroll-margin-top: 80px;
+}
+.inventory-shell { max-width: 1250px; margin: 0 auto; }
+.inventory-heading { margin-bottom: 35px; }
+.inventory-heading > span { color: #5cecff; font: 10px "Press Start 2P", monospace; }
+.inventory-heading h2 { color: #ffe28a; margin: 20px 0; font: clamp(22px, 3vw, 34px)/1.6 "Press Start 2P", monospace; }
+.inventory-heading p { color: #b5c1df; line-height: 1.8; max-width: 760px; }
+.inventory-frame { background: #121831; border: 3px solid #7860bf; box-shadow: 9px 9px 0 #352858; }
+.inventory-topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; background: #282147; border-bottom: 2px solid #7855bd; color: #ffe28a; font: 10px/1.8 "Press Start 2P", monospace; }
+.inventory-topbar span:last-child { color: #69eac4; }
+.inventory-filters { padding: 24px 24px 5px; display: flex; flex-wrap: wrap; gap: 9px; }
+.inventory-filter { cursor: pointer; border: 1px solid #41557e; padding: 12px; background: #1b2544; color: #b6c9f8; font: 9px "Press Start 2P", monospace; }
+.inventory-filter:hover, .inventory-filter:focus-visible { border-color: #5cecff; color: white; }
+.inventory-filter.active { background: #7850cc; border-color: #b69aff; color: #fff; }
+.inventory-layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(270px, .85fr); gap: 24px; padding: 22px 24px 26px; }
+.inventory-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-content: start; gap: 12px; }
+.inventory-item { min-height: 138px; border: 2px solid #384a78; background: #1d294a; color: #fff; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 14px 8px; transition: transform .15s, border-color .15s, background .15s; }
+.inventory-item:hover, .inventory-item:focus-visible { transform: translateY(-3px); border-color: #70e8ff; }
+.inventory-item.selected { border-color: #5cecff; box-shadow: inset 0 0 0 1px #5cecff, 4px 4px 0 #2c75a3; background: #253658; }
+.inventory-item-icon { font-size: 35px; line-height: 1.2; }
+.inventory-item-name { font-size: 13px; font-weight: 700; text-align: center; }
+.inventory-item-category { font-size: 9px; letter-spacing: 1px; color: #94a9d8; }
+.inventory-detail { display: flex; flex-direction: column; align-items: flex-start; background: #1b2544; border: 2px solid #465786; padding: 24px; min-height: 100%; }
+.inventory-detail-kicker { color: #5cecff; font: 9px/1.7 "Press Start 2P", monospace; }
+.inventory-detail-icon { font-size: 62px; margin: 25px 0 12px; }
+.inventory-detail h3 { color: #ffe28a; font: clamp(15px, 1.8vw, 22px)/1.7 "Press Start 2P", monospace; overflow-wrap: anywhere; }
+.inventory-type { color: #5cecff; font: 9px/1.8 "Press Start 2P", monospace; margin: 14px 0 22px; }
+.inventory-detail p { color: #c3cde8; line-height: 1.8; margin-bottom: 30px; }
+.inventory-used { margin-top: auto; display: flex; flex-direction: column; gap: 12px; width: 100%; }
+.inventory-used strong { color: #ffe28a; font: 9px/1.6 "Press Start 2P", monospace; }
+.inventory-used span { color: #d0d9ef; font-size: 13px; }
+.inventory-quest-link { margin-top: 30px; display: inline-block; text-decoration: none; color: white; background: #8354de; box-shadow: 4px 4px 0 #452b83; padding: 15px; font: 9px/1.6 "Press Start 2P", monospace; }
+.inventory-quest-link:hover, .inventory-quest-link:focus-visible { background: #a477ff; }
+.inventory-footer { padding: 14px 24px; border-top: 1px solid #3d4873; text-align: center; color: #95a2cb; font: 8px/1.8 "Press Start 2P", monospace; }
+@media (max-width: 900px) { .inventory-layout { grid-template-columns: 1fr; } .inventory-detail { min-height: 310px; } }
+@media (max-width: 540px) { .inventory-section { padding: 80px 5%; } .inventory-topbar { padding: 15px; font-size: 8px; flex-wrap: wrap; } .inventory-filters { padding: 18px 12px 0; } .inventory-filter { font-size: 8px; padding: 10px; } .inventory-layout { padding: 18px 12px; gap: 18px; } .inventory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; } .inventory-item { min-height: 120px; } .inventory-detail { padding: 18px; } }
+@media (prefers-reduced-motion: reduce) { .inventory-item { transition: none; } }

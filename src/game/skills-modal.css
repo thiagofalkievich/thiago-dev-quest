@@ -1,0 +1,26 @@
+.inventory-overlay{position:fixed;inset:0;z-index:1000;background:rgba(3,5,17,.85);display:flex;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
+.inventory-panel{width:min(100%,1080px);max-height:min(92vh,950px);overflow-y:auto;background:#11162e;border:3px solid #895de0;box-shadow:10px 10px 0 #302251,0 0 55px #4a2c8344;color:#e9edff}
+.inventory-header{display:flex;align-items:center;justify-content:space-between;padding:17px 22px;background:#282047;border-bottom:2px solid #895de0;color:#ffe28a;font:11px/1.7 "Press Start 2P",monospace}
+.inventory-close{cursor:pointer;border:1px solid #dad4ff;border-radius:4px;background:#503883;color:#fff;padding:8px 12px;font:16px sans-serif}
+.inventory-body{padding:26px 30px 20px}
+.inventory-kicker{color:#80ffc1;font:10px "Press Start 2P",monospace}
+.inventory-body h3{font:clamp(16px,2.4vw,24px)/1.7 "Press Start 2P",monospace;color:#ffe28a;margin:16px 0}
+.inventory-intro{color:#b8c4df;line-height:1.7;margin-bottom:20px}
+.inventory-tabs{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px}
+.inventory-tabs button{cursor:pointer;padding:10px 12px;background:#191f3d;border:1px solid #40517d;color:#a9ceeb;font:9px "Press Start 2P",monospace}
+.inventory-tabs button.active,.inventory-tabs button:hover{background:#7149cc;border-color:#b299ff;color:#fff}
+.inventory-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(220px,1fr);gap:18px}
+.inventory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-content:start;gap:11px}
+.inventory-slot{cursor:pointer;min-height:105px;padding:12px 6px;background:#1b2545;border:2px solid #34466f;color:#e7edff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;font-size:12px;font-weight:700;overflow-wrap:anywhere;text-align:center}
+.inventory-slot:hover,.inventory-slot.selected{border-color:#5be7ff;background:#23375b;box-shadow:inset 0 0 0 2px #5be7ff33}
+.inventory-icon{font:30px/1.2 system-ui,sans-serif;color:#5be7ff}
+.inventory-details{border:2px solid #444b80;padding:22px;background:#161d3a;display:flex;flex-direction:column;align-items:flex-start;min-height:280px}
+.inventory-detail-icon{font:48px/1.2 system-ui,sans-serif;margin-bottom:14px;color:#5be7ff}
+.inventory-type{font:9px/1.7 "Press Start 2P",monospace;color:#6fe5fc}
+.inventory-details h4{font:clamp(12px,1.7vw,17px)/1.7 "Press Start 2P",monospace;color:#ffe28a;margin:14px 0}
+.inventory-details p{color:#b9c5e0;line-height:1.7;font-size:14px}
+.inventory-used-in{margin-top:auto;padding-top:20px;display:flex;flex-direction:column;gap:9px;font-size:13px}
+.inventory-used-in span{font:9px "Press Start 2P",monospace;color:#5be7ff}
+.inventory-used-in strong{line-height:1.6}
+.inventory-footer{text-align:center;font:9px/1.7 "Press Start 2P",monospace;color:#8a9abd;margin:24px 0 0}
+@media(max-width:700px){.inventory-body{padding:20px 14px}.inventory-layout{grid-template-columns:1fr}.inventory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.inventory-header{padding:12px;font-size:9px}.inventory-slot{min-height:90px}.inventory-panel{max-height:95vh}}

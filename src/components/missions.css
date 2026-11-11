@@ -1,0 +1,56 @@
+.missions-section { background: linear-gradient(180deg,#0b1025 0%,#13142d 50%,#0a1023 100%); padding: 112px 6% 130px; scroll-margin-top: 78px; color:#e8ecff; }
+.missions-container { max-width: 1240px; margin:auto; }
+.missions-intro { margin-bottom:40px; }
+.missions-eyebrow { font: 9px 'Press Start 2P',monospace; color:#6ee8ef; line-height:1.8; }
+.missions-intro h2 { margin:22px 0; color:#ffe28a; font:clamp(22px,3vw,35px)/1.5 'Press Start 2P',monospace; }
+.missions-intro p { max-width:720px; color:#afbadb; line-height:1.8; font-size:15px; }
+.missions-shell { border:3px solid #8b69da; background:#121831; box-shadow:9px 9px 0 #2d2456; }
+.missions-topbar { padding:21px 24px; display:flex; justify-content:space-between; gap:16px; background:#2c2348; border-bottom:2px solid #7956c7; font:9px/1.8 'Press Start 2P',monospace; color:#ffe28a; }
+.missions-topbar span:last-child { color:#77ffbf; }
+.missions-layout { display:grid; grid-template-columns:minmax(220px,310px) minmax(0,1fr); gap:24px; padding:27px; align-items:start; }
+.missions-list { display:grid; gap:12px; }
+.mission-picker { text-align:left; position:relative; background:#1c2543; border:1px solid #45547e; padding:20px 36px 20px 18px; color:#fff; cursor:pointer; min-height:114px; transition:background .15s,border-color .15s,transform .15s; }
+.mission-picker:hover { border-color:#75eaf7; transform:translateY(-2px); }
+.mission-picker.selected { border:2px solid #ffe28a; background:#292e50; }
+.mission-picker-number { display:block; color:#71edff; font:9px 'Press Start 2P',monospace; margin-bottom:13px; }
+.mission-picker strong { display:block; font-size:17px; margin-bottom:7px; }
+.mission-picker small { font-size:11px; color:#b7c4e9; line-height:1.5; }
+.mission-picker-arrow { position:absolute; right:14px; top:50%; transform:translateY(-50%); color:#ffe28a; }
+.missions-completion { padding:15px; border:1px solid #43527d; display:flex; justify-content:space-between; gap:12px; font:8px/1.7 'Press Start 2P',monospace; }
+.missions-completion strong { color:#72f5b8; }
+.missions-nav-hint { color:#96a5ca; font-size:12px; line-height:1.7; }
+.mission-detail { min-width:0; border:1px solid #4b577d; background:#1b2543; }
+.mission-detail-header { padding:24px; background:linear-gradient(120deg,#20304f,#1a3e5c); display:grid; grid-template-columns:1fr auto; gap:12px; border-bottom:1px solid #4a5f87; }
+.mission-detail.gold .mission-detail-header { background:linear-gradient(120deg,#37284b,#3c3442); }
+.mission-detail-header span { font:8px/1.7 'Press Start 2P',monospace; color:#78eaf9; }
+.mission-detail-header span:nth-child(2) { color:#78f1b7; }
+.mission-detail-header h3 { grid-column:1/-1; font:clamp(17px,2vw,23px)/1.5 'Press Start 2P',monospace; color:#ffe28a; margin:0; }
+.mission-preview { position:relative; height:clamp(190px,28vw,350px); margin:21px 22px 0; border:2px solid #5973a1; overflow:hidden; background:radial-gradient(circle at 50% 45%,#2c355d,#10182f); }
+.mission-preview.gold { border-color:#987c56; }
+.mission-preview-image { object-fit:contain; image-rendering:auto; }
+.mission-preview-empty { height:100%; display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; gap:14px; padding:20px; color:#a5b5d9; }
+.mission-preview-empty > span { font-size:48px; color:#6e8cc8; }
+.mission-preview-empty strong { color:#ffe28a; font:10px/1.6 'Press Start 2P',monospace; }
+.mission-preview-empty small { max-width:360px; line-height:1.6; overflow-wrap:anywhere; }
+.mission-detail-body { padding:26px 22px 30px; }
+.mission-description { font-size:15px; color:#e1e9ff; line-height:1.9; margin:0 0 25px; }
+.mission-facts { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.mission-facts > div { border:1px solid #43567e; padding:17px; background:#19213c; }
+.mission-facts small { color:#83dffc; font:8px/1.5 'Press Start 2P',monospace; }
+.mission-facts p { font-size:12px; line-height:1.75; margin:12px 0 0; }
+.mission-detail-body h4 { margin:32px 0 17px; color:#79eaff; font:10px/1.6 'Press Start 2P',monospace; }
+.mission-achievements { list-style:none; margin:0; padding:0; display:grid; gap:13px; }
+.mission-achievements li { position:relative; padding-left:24px; line-height:1.6; font-size:13px; }
+.mission-achievements li::before { content:'✦'; position:absolute; top:0; left:2px; color:#ffe28a; }
+.mission-flow { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.mission-flow-step { background:#17243f; border:1px solid #475a80; padding:13px; font-size:12px; line-height:1.6; }
+.mission-flow-step span { display:block; font:9px 'Press Start 2P',monospace; color:#ffe28a; margin-bottom:8px; }
+.mission-tags { display:flex; flex-wrap:wrap; gap:8px; }
+.mission-tags span { padding:9px 10px; border:1px solid #47839f; color:#8eeeff; font-size:11px; background:#14243c; }
+.mission-actions { display:flex; flex-wrap:wrap; align-items:center; gap:13px; margin-top:28px; }
+.mission-actions a { text-decoration:none; padding:14px 17px; background:#8d5deb; box-shadow:4px 4px 0 #4c327e; font:9px/1.5 'Press Start 2P',monospace; color:#fff; }
+.mission-actions a.secondary { background:transparent; border:1px solid #62d9ed; box-shadow:none; color:#8cedff; }
+.mission-actions a:hover { filter:brightness(1.2); }
+.mission-action-disabled { border:1px solid #4a5576; color:#aab6d2; padding:13px; font:9px/1.7 'Press Start 2P',monospace; }
+@media(max-width:900px) { .missions-layout { grid-template-columns:1fr; } .missions-list { grid-template-columns:repeat(2,minmax(0,1fr)); } .missions-completion,.missions-nav-hint { grid-column:1/-1; } }
+@media(max-width:560px) { .missions-section { padding:80px 5%; } .missions-layout { padding:14px; gap:17px; } .missions-topbar { padding:16px; font-size:7px; } .missions-list { grid-template-columns:1fr; } .mission-picker { min-height:95px; } .mission-facts,.mission-flow { grid-template-columns:1fr; } .mission-detail-header { padding:17px; } .mission-preview { margin:12px 12px 0; height:220px; } .mission-detail-body { padding:18px 14px; } }

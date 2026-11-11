@@ -1,0 +1,99 @@
+/* THIAGO DEV QUEST — Ajustes responsive de toda la web.
+   Importar DESPUÉS de los estilos de las secciones. */
+html { scroll-padding-top: 84px; }
+body { overflow-x: hidden; }
+main, section, .inventory-frame, .missions-shell, .contact-terminal,
+.character-panel, .rpg-window { min-width: 0; }
+img { max-width: 100%; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible { outline: 3px solid #5cecff; outline-offset: 3px; }
+
+@media (max-width: 900px) {
+  .hero { min-height: auto; padding-top: 130px; }
+  .hero-title { overflow-wrap: anywhere; }
+  .hero-character { width: 100%; }
+  .game-section { padding-inline: 4%; }
+  /* El mundo conserva su ancho interno; la cámara del juego lo recorre. */
+  .game-viewport { width: 100%; max-width: 100%; height: 460px; overflow: hidden; }
+  .game-world { flex: none; }
+  .inventory-layout, .missions-layout, .contact-terminal-body { min-width: 0; }
+  .inventory-detail, .mission-detail, .contact-console, .contact-result { min-width: 0; }
+}
+
+@media (max-width: 600px) {
+  html { scroll-padding-top: 72px; }
+  .navbar { height: 70px; padding-inline: 5%; }
+  .nav-links { top: 70px; max-height: calc(100dvh - 70px); overflow-y: auto; }
+  .navbar-logo { font-size: clamp(9px, 2.7vw, 12px); }
+  .menu-toggle { min-width: 44px; min-height: 44px; }
+
+  .hero { padding: 110px 5% 80px; gap: 50px; }
+  .hero-title { font-size: clamp(21px, 6.2vw, 34px); line-height: 1.65; }
+  .hero-description { font-size: 14px; line-height: 1.75; }
+  .hero-subtitle { font-size: clamp(8px, 2.3vw, 11px); }
+  .hero-buttons { gap: 14px; }
+  .pixel-button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  .hero-technologies { margin-top: 28px; }
+  .hero-bottom { font-size: 7px; }
+  .character-frame { max-width: 340px; }
+
+  .game-section { padding: 76px 4% 65px; }
+  .game-heading h2 { font-size: clamp(15px, 4.6vw, 23px); }
+  .game-heading p { font-size: 13px; }
+  .game-viewport { height: 460px; border-width: 3px; box-shadow: 4px 4px 0 #332758; }
+  .game-hud { gap: 18px; font-size: 8px; }
+  .game-mobile-controls { display: flex; justify-content: center; flex-wrap: wrap; }
+  .game-mobile-controls button { min-width: 50px; min-height: 48px; padding: 10px; font-size: 18px; touch-action: none; }
+
+  .character-section, .inventory-section, .missions-section, .contact-section { padding-inline: 5%; }
+  .character-panel, .inventory-frame, .missions-shell, .contact-terminal { box-shadow: 4px 4px 0 #322550; }
+  .character-panel-grid { gap: 25px; }
+  .character-panel-top, .inventory-topbar, .missions-topbar, .contact-terminal-header { flex-wrap: wrap; }
+  .character-art { min-height: 350px; }
+  .character-fullbody { max-width: 100%; max-height: 330px; height: auto; object-fit: contain; }
+  .character-right > h3 { font-size: 24px; }
+  .character-story-button, .character-quest-link { line-height: 1.8; }
+
+  .inventory-layout { grid-template-columns: 1fr; }
+  .inventory-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .inventory-item { min-height: 110px; }
+  .inventory-item-name { overflow-wrap: anywhere; font-size: 12px; }
+  .inventory-detail { min-height: 0; }
+
+  .missions-layout { grid-template-columns: 1fr; }
+  .missions-list { grid-template-columns: 1fr; }
+  .mission-detail-header { grid-template-columns: 1fr; }
+  .mission-detail-header h3 { overflow-wrap: anywhere; }
+  .mission-preview { height: 210px; }
+  .mission-actions a { min-height: 44px; }
+
+  .contact-terminal-body { grid-template-columns: 1fr; }
+  .contact-console, .contact-result { padding: 16px; }
+  .contact-main-action, .contact-copy { min-height: 44px; }
+  .contact-quick-links a { overflow-wrap: anywhere; }
+
+  /* Ventanas RPG: visibles y desplazables en pantallas pequeñas. */
+  .rpg-overlay, .inventory-overlay, .missions-overlay {
+    padding: 12px !important;
+    overflow-y: auto;
+    align-items: center;
+  }
+  .rpg-window, .inventory-panel, .missions-window {
+    width: min(100%, 100vw - 24px);
+    max-height: calc(100dvh - 24px);
+    overflow-y: auto;
+  }
+  .rpg-player-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 380px) {
+  .hero-title { font-size: 20px; }
+  .game-kicker, .inventory-heading > span, .missions-eyebrow, .contact-eyebrow { font-size: 8px; }
+  .inventory-item-icon { font-size: 28px; }
+  .inventory-filter { font-size: 7px; }
+  .character-facts { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}
